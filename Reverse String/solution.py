@@ -18,7 +18,6 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    iput = ["도", "랏", "맨", "이", "나", "타"]
-    # iput = ["h", "e", "l", "l", "o"]
+    iput = ["h", "e", "l", "l", "o"]
     sol = Solution()
     sol.reverseString(iput)
