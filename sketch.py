@@ -1,0 +1,5 @@
+print(int(1/2))
+print(int(2/2))
+print(int(3/2))
+print(int(4/2))
+print(int(5/2))
