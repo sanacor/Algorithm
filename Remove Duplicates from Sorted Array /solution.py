@@ -1,21 +1,26 @@
-nums = [1, 1, 1, 3, 4, 4, 5, 6]
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
 
-# nums = [1, 3, 1, 3, 4, 4, 5, 6]
+        cur = 0
+        for idx, val in enumerate(nums):
+            if nums[cur] == nums[idx]:
+                continue
+            else:
+                cur=cur+1
+                nums[cur] = nums[idx]
 
-len = len(nums)
-saved = None
-cnt = 0
-
-for index, value in enumerate(nums):
-    print(index, value)
-    # index = index +
-    for i in range(index + 1, len):
-        if value == nums[i]:
-            cnt = cnt + 1
-        else:
-            # saved = i
-            nums[index+1] = nums[index+i]
-            print()
-            break
+        return cur + 1
 
 
+if __name__ == '__main__':
+    nums = [1, 1, 2]
+    nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+
+    sol = Solution()
+    length = sol.removeDuplicates(nums)
+    print(length)
+    print(nums)
