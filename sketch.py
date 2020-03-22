@@ -1,2 +1,1 @@
-if 0 > -1:
-    print('shit')
+print(int(5/2))
